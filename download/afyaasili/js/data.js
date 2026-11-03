@@ -97,8 +97,8 @@ const PRODUCTS = [
       en: "60 capsules of pure moringa powder for those who prefer convenience.",
     },
     description: {
-      sw: "Kapsuli rahisi za kumeza zilizojazwa kwa unga wa majani ya moringa safi, bila viongeza. Zinafaa kwa watu wenye ratiba ya haraka wanaotaka kuingiza moringa katika siku zao bila fueko. Maelezo ya kiasi cha matumizi yatasasishwa na BFSUMA.",
-      en: "Easy-to-swallow capsules filled with pure moringa leaf powder and nothing else. Ideal for busy people who want to include moringa in their day without the mixing. Usage guidance will be updated by BFSUMA.",
+      sw: "Kapsuli rahisi za kumeza zilizojazwa kwa unga wa majani ya moringa safi, bila viongeza. Zinafaa kwa watu wenye ratiba ya haraka wanaotaka kuingiza moringa katika siku zao bila fueko.",
+      en: "Easy-to-swallow capsules filled with pure moringa leaf powder and nothing else. Ideal for busy people who want to include moringa in their day without the mixing.",
     },
   },
   {
@@ -306,7 +306,6 @@ const TEXT = {
     a_title: "Kuhusu BFSUMA",
     a_p1: "BFSUMA ni kampuni inayouza dawa na virutubisho vya asili kwa soko la Afrika Mashariki. Kupitia chapa ya AfyaAsili, tunaweka bidhaa za asili mkononi pako kwa bei nafuu na kwa njia ya wazi.",
     a_p2: "Tunaamini katika uwazi: kila bidhaa inaelezwa kikamilifu kwa jina, kifurushi na bei, na oda zako zinapelekwa moja kwa moja kwa timu yetu kupitia WhatsApp na barua pepe ili upate majibu ya haraka.",
-    a_note: "Maelezo haya ya mfano yatasasishwa na BFSUMA.",
     a_pt1: "Bidhaa kutoka kwa wakulima na wakusanyaji wa mitaa",
     a_pt2: "Ufungashaji salama na usafi kwa kila oda",
     a_pt3: "Mawasiliano ya moja kwa moja na timu ya BFSUMA",
@@ -425,7 +424,6 @@ const TEXT = {
     a_title: "About BFSUMA",
     a_p1: "BFSUMA is a company selling natural remedies and supplements to the East African market. Through the AfyaAsili brand, we put natural products within your reach at fair prices and in a transparent way.",
     a_p2: "We believe in transparency: every product is clearly described by name, pack size and price, and your orders go straight to our team via WhatsApp and email so you get a quick response.",
-    a_note: "This sample text will be updated by BFSUMA.",
     a_pt1: "Products from local farmers and gatherers",
     a_pt2: "Safe, clean packaging for every order",
     a_pt3: "Direct communication with the BFSUMA team",
