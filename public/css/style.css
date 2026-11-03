@@ -161,7 +161,6 @@ a { text-decoration: none; }
 .site-navbar.scrolled .brand-sub { color: var(--clr-muted); }
 
 .site-navbar .navbar-toggler {
-  display: inline-flex;
   flex: 0 0 44px;
   width: 44px;
   height: 44px;
@@ -178,6 +177,7 @@ a { text-decoration: none; }
 .site-navbar .navbar-toggler:focus { box-shadow: none; outline: 3px solid var(--clr-accent); outline-offset: 2px; }
 
 @media (max-width: 991.98px) {
+  .site-navbar .navbar-toggler { display: inline-flex; }
   .site-navbar .navbar-collapse {
     background: #fff;
     margin-top: 0.75rem;
