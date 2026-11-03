@@ -95,15 +95,20 @@ a { text-decoration: none; }
 
 /* ---------- Menyu ya juu / Navbar ---------- */
 .site-navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
   padding: 0.65rem 0;
   transition: background 0.3s ease, box-shadow 0.3s ease;
-  background: transparent;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
 }
 
 .site-navbar.scrolled {
-  background: rgba(255, 255, 255, 0.97);
+  background: #fff;
   box-shadow: var(--shadow-sm);
-  backdrop-filter: blur(8px);
 }
 
 .brand-icon {
@@ -123,28 +128,28 @@ a { text-decoration: none; }
   font-weight: 800;
   font-size: 1.25rem;
   letter-spacing: -0.02em;
-  color: #fff;
+  color: var(--clr-primary-dark);
   transition: color 0.3s ease;
 }
 .brand-sub {
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--clr-muted);
   transition: color 0.3s ease;
 }
 
 .site-navbar .nav-link {
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--clr-text);
   font-weight: 500;
   border-radius: 999px;
   padding: 0.4rem 0.9rem !important;
   transition: color 0.25s ease, background 0.25s ease;
 }
 .site-navbar .nav-link:hover,
-.site-navbar .nav-link:focus { color: var(--clr-accent); }
+.site-navbar .nav-link:focus { color: var(--clr-primary); }
 
-.site-navbar .nav-link.active { color: #fff; background: rgba(255, 255, 255, 0.14); }
+.site-navbar .nav-link.active { color: var(--clr-primary-dark); background: var(--clr-cream); }
 
 .order-badge { background: var(--clr-accent); color: #3d2b05; font-size: 0.68rem; }
 
@@ -155,9 +160,22 @@ a { text-decoration: none; }
 .site-navbar.scrolled .brand-name { color: var(--clr-primary-dark); }
 .site-navbar.scrolled .brand-sub { color: var(--clr-muted); }
 
-.navbar-toggler { color: #fff; font-size: 1.35rem; padding: 0.35rem 0.6rem; }
-.site-navbar.scrolled .navbar-toggler { color: var(--clr-primary-dark); }
-.navbar-toggler:focus { box-shadow: none; outline: 3px solid var(--clr-accent); border-radius: 8px; }
+.site-navbar .navbar-toggler {
+  display: inline-flex;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--clr-primary-dark);
+  font-size: 1.25rem;
+  background: #fff;
+  border: 1px solid var(--clr-line);
+  border-radius: 10px;
+}
+.site-navbar .navbar-toggler:hover { background: var(--clr-cream); }
+.site-navbar .navbar-toggler:focus { box-shadow: none; outline: 3px solid var(--clr-accent); outline-offset: 2px; }
 
 @media (max-width: 991.98px) {
   .site-navbar .navbar-collapse {
@@ -166,14 +184,16 @@ a { text-decoration: none; }
     padding: 1rem 1.25rem 1.25rem;
     border-radius: var(--radius);
     box-shadow: var(--shadow-md);
+    max-height: calc(100vh - 5.5rem);
+    max-height: calc(100dvh - 5.5rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
   .site-navbar .navbar-collapse .nav-link,
   .site-navbar .navbar-collapse .brand-name { color: var(--clr-text); }
   .site-navbar .navbar-collapse .nav-link.active { background: var(--clr-cream); color: var(--clr-primary-dark); }
   .site-navbar .navbar-collapse .brand-name { color: var(--clr-primary-dark); }
   .site-navbar .navbar-collapse .brand-sub { color: var(--clr-muted); }
-  .site-navbar .navbar-collapse .navbar-toggler { color: var(--clr-primary-dark); }
-  .site-navbar:not(.scrolled) .navbar-toggler { color: #fff; }
 }
 
 .w-lg-auto { width: 100%; }
@@ -191,11 +211,11 @@ a { text-decoration: none; }
   padding-right: 1rem;
   font-size: 0.9rem;
   border: 1px solid var(--clr-line);
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
+  background: #fff;
+  color: var(--clr-text);
   transition: background 0.25s ease, color 0.25s ease;
 }
-.nav-search .form-control::placeholder { color: rgba(255, 255, 255, 0.65); }
+.nav-search .form-control::placeholder { color: var(--clr-muted); }
 .nav-search .form-control:focus {
   background: #fff;
   color: var(--clr-text);
@@ -211,19 +231,19 @@ a { text-decoration: none; }
   pointer-events: none;
   z-index: 5;
 }
-.nav-search .search-ico { color: rgba(255, 255, 255, 0.7); }
+.nav-search .search-ico { color: var(--clr-muted); }
 
 /* Kitufe cha lugha / language switch */
 .lang-switch {
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: var(--clr-cream);
+  border: 1px solid var(--clr-line);
   border-radius: 999px;
   padding: 3px;
 }
 .lang-btn {
   border: 0;
   background: transparent;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--clr-muted);
   font-weight: 700;
   font-size: 0.8rem;
   padding: 0.3rem 0.85rem;
@@ -677,7 +697,7 @@ a { text-decoration: none; }
 }
 
 .footer-links li { margin-bottom: 0.55rem; font-size: 0.92rem; }
-.footer-links a { color: rgba(255, 255, 255, 0.82); transition: color 0.2s ease; }
+.footer-links a { color: rgba(255, 255, 255, 0.82); overflow-wrap: anywhere; transition: color 0.2s ease; }
 .footer-links a:hover { color: var(--clr-accent); }
 
 .footer-hr { border-color: rgba(255, 255, 255, 0.14); }
